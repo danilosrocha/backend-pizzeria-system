@@ -1,29 +1,29 @@
-// Cadastro de usuário
-@token = Baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRWRkIiwiZW1haWwiOiJFZGRAZ21haWwuY29tIiwiaWF0IjoxNjc0Nzg5NDUyLCJleHAiOjE2NzczODE0NTIsInN1YiI6IjQ1MWRlZGZjLWVlY2UtNDkwYS05NGZkLTFmMDM2ZThlZTdmNCJ9.RaoMEeXC9S9kGgoRVZcBV-qMvN3ETXuBTAoo5pUt_mI
 
+@token = Baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRGFuaWxvIiwiZW1haWwiOiJEYW5pbG9AZ21haWwuY29tIiwiaWF0IjoxNjc0ODM4MTM1LCJleHAiOjE2Nzc0MzAxMzUsInN1YiI6ImZiMTZjNzg3LTA4OTctNGI4Yi1iOTVlLWI3N2YyYjVkMTdmNyJ9.4q-O_r39KomWk1W7OVoimJHeI_TFsDopTVP9QK3eFZQ
+
+// USERS
 POST  http://localhost:3333/users
 content-type: application/json
 
 {
-    "name": "Edd",
-    "email": "EddD@gmail.com",
+    "name": "Danilo",
+    "email": "Danilo@gmail.com",
     "password": "123456"
 }
 ###
-// Login de usuário@
+
 POST  http://localhost:3333/session
 content-type: application/json
 
 {
-    "email": "Edd@gmail.com",
+    "email": "Danilo@gmail.com",
     "password": "123456"
 }
 ###
 GET http://localhost:3333/userInfo
 Authorization: {{token}}
 
-
-// Categorys
+// CATEGORYS
 ###
 POST  http://localhost:3333/category
 content-type: application/json
@@ -35,4 +35,10 @@ Authorization: {{token}}
 
 ###
 GET http://localhost:3333/categories
+Authorization: {{token}}
+
+// PRODUCTS
+###
+POST http://localhost:3333/product
+content-type: application/json
 Authorization: {{token}}
