@@ -1,5 +1,5 @@
 
-@token = Baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRGFuaWxvIiwiZW1haWwiOiJEYW5pbG9AZ21haWwuY29tIiwiaWF0IjoxNjc0ODM4MTM1LCJleHAiOjE2Nzc0MzAxMzUsInN1YiI6ImZiMTZjNzg3LTA4OTctNGI4Yi1iOTVlLWI3N2YyYjVkMTdmNyJ9.4q-O_r39KomWk1W7OVoimJHeI_TFsDopTVP9QK3eFZQ
+@token = Baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRGFuaWxvIiwiZW1haWwiOiJEYW5pbG9AZ21haWwuY29tIiwiaWF0IjoxNjc0ODM5NzE1LCJleHAiOjE2Nzc0MzE3MTUsInN1YiI6ImZiMTZjNzg3LTA4OTctNGI4Yi1iOTVlLWI3N2YyYjVkMTdmNyJ9.s-yI7jzMV1jz1BIUK6gL4zL743_sSvM5Wh_MwKYPWfY
 
 // USERS
 POST  http://localhost:3333/users
@@ -30,7 +30,9 @@ content-type: application/json
 Authorization: {{token}}
 
 {
-    "name": "Sobremesas"
+    "name": "Comidas"
+    "aimg": " "
+    
 }
 
 ###
@@ -39,6 +41,5 @@ Authorization: {{token}}
 
 // PRODUCTS
 ###
-POST http://localhost:3333/product
-content-type: application/json
+GET http://localhost:3333/category/product?=389b63ee-aa50-43ea-9cf7-8c685777d94f
 Authorization: {{token}}

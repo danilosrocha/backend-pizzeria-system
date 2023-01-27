@@ -18,6 +18,13 @@ class CreateProductService {
                 description: description,
                 banner: banner,
                 category_id: category_id,
+            },
+            select: {
+                name: true,
+                price: true,
+                description: true,
+                banner: true,
+                category_id: true
             }
         })
 
