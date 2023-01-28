@@ -27,7 +27,12 @@ class RemoveOrderService {
             }
         })
 
-        return delOrder
+        const message = {
+            message: "Successfully deleted order!",
+            ...delOrder,
+        }
+
+        return message
     }
 }
 

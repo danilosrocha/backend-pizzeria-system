@@ -9,10 +9,6 @@ interface ProductByCategoryRequest {
 class ListByCategoryService {
     async execute({ category_id, skip, limit }: ProductByCategoryRequest) {
 
-        if (!category_id) {
-            throw new Error('Enter the category!')
-        }
-
         try {
             const findProducts = await prismaClient.product.findMany({
                 where: {
