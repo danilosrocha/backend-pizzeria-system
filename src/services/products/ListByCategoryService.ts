@@ -13,11 +13,11 @@ class ListByCategoryService {
             throw new Error('Enter the category!')
         }
 
-        console.log(skip, limit);
-
-
         try {
             const findProducts = await prismaClient.product.findMany({
+                where: {
+                    category_id: category_id
+                },
                 skip,
                 take: Number(limit),
                 orderBy: {

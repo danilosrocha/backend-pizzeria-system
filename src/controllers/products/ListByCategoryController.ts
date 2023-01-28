@@ -11,8 +11,6 @@ class ListByCategoryController {
 
         const listByCategoryService = new ListByCategoryService()
 
-        console.log(category_id);
-
         const productsByCategory = await listByCategoryService.execute({ category_id, skip, limit })
 
         return res.json(productsByCategory)

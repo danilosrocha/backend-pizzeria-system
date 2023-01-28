@@ -43,3 +43,10 @@ Authorization: {{token}}
 ###
 GET http://localhost:3333/category/product?=389b63ee-aa50-43ea-9cf7-8c685777d94f
 Authorization: {{token}}
+
+
+###
+POST  http://localhost:3333/order
+content-type: application/json
+Authorization: {{token}}
+
