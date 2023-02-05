@@ -6,10 +6,11 @@ class ListOrderController {
         const page = (req.query.page || 1) as number;
         const limit = (req.query.limit || 10) as number;
         const skip = (page - 1) * limit;
+        const status = (req.query.status) as string
 
         const listOrderService = new ListOrderService();
 
-        const orders = await listOrderService.execute({ skip, limit })
+        const orders = await listOrderService.execute({ skip, limit, status })
 
         return res.json(orders)
 

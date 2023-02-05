@@ -1,12 +1,13 @@
+import { ProductRequest } from './../../services/products/CreateProductService';
 import { Request, Response } from 'express'
 import { CreateProductService } from '../../services/products/CreateProductService';
 
 class CreateProductController {
     async handle(req: Request, res: Response) {
-        const { name, price, description, category_id } = req.body;
+        const { name, price, description, category_id } = req.body as ProductRequest;
 
         const createProductService = new CreateProductService();
-
+        
         if (!req.file) {
             throw new Error("error upload file")
         } else {
