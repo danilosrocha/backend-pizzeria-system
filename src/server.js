@@ -7,6 +7,7 @@ const express_1 = __importDefault(require("express"));
 require("express-async-errors");
 const cors_1 = __importDefault(require("cors"));
 const path_1 = __importDefault(require("path"));
+const port = process.env.PORT || 5002;
 const routes_1 = require("./routes");
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
@@ -25,4 +26,6 @@ app.use((err, req, res, next) => {
         message: 'Internal server error.'
     });
 });
-app.listen(3333, () => console.log(' -> Servidor online!'));
+app.listen(port, () => {
+    console.log(' --> Server started');
+});
