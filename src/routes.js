@@ -23,9 +23,11 @@ const ListItemByOrderController_1 = require("./controllers/item/ListItemByOrderC
 const RemoveItemController_1 = require("./controllers/item/RemoveItemController");
 const SendOrderController_1 = require("./controllers/order/SendOrderController");
 const CompleteOrderController_1 = require("./controllers/order/CompleteOrderController");
+const GetStart_1 = require("./controllers/GetStart");
 const router = (0, express_1.Router)();
 exports.router = router;
 const upload = (0, multer_1.default)(multer_2.default.upload("./tmp"));
+router.get("/", new GetStart_1.GetStartController().handle);
 //-- ROTAS USER --
 router.post('/users', new CreateUserController_1.CreateUserController().handle);
 router.post('/session', new AuthUserController_1.AuthUserController().handle);

@@ -19,12 +19,16 @@ import { ListItemByOrderController } from './controllers/item/ListItemByOrderCon
 import { RemoveItemController } from './controllers/item/RemoveItemController';
 import { SendOrderController } from './controllers/order/SendOrderController';
 import { CompleteOrderController } from './controllers/order/CompleteOrderController';
+import { GetStartController } from './controllers/GetStart';
 
 const router = Router();
 
 const upload = multer(uploadConfig.upload("./tmp"));
 
+router.get("/", new GetStartController().handle)
+
 //-- ROTAS USER --
+
 router.post('/users', new CreateUserController().handle)
 
 router.post('/session', new AuthUserController().handle)
