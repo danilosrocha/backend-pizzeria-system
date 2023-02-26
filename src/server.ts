@@ -2,6 +2,7 @@ import express, { Request, Response, NextFunction } from 'express'
 import 'express-async-errors';
 import cors from 'cors';
 import path from 'path'
+const port = process.env.PORT || 3333
 
 import { router } from './routes'
 
@@ -28,4 +29,4 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 
 })
 
-app.listen(3333, () => console.log(' -> Servidor online!'))
+app.listen(port, () => console.log(' -> Servidor online!'))
